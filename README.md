@@ -46,6 +46,7 @@ line15: Give a skyvalue of each batch of images in units of ADUs.
 line16: Specify which keyword values you want to extract from the fits headers. (e.g. AIRMASS) The ordering here will appear as is in the all_phot output.
 
 Once your parameter file is setup you run all_phot using the following command:
+
         python all_phot.py parameterFile.txt
 
 #Common Problems
