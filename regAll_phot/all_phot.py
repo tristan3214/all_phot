@@ -1,10 +1,8 @@
 ##########
 ##########
-# You will be changing all the parameters in here that you would have changed in easy_phot_params.py.
-# I am essentially for looping easy_phot and so I feed the param file update variable names.
+# I am essentially for looping easy_phot.
 # This only uses iraf and no astropy so it can run on UW astro computers.
-# One can use any number of star to measure you will just have to skip lines when you pull
-# out columns of HJD, magX, and merrX.
+
 
 
 import numpy as np # for vectorized arrays
