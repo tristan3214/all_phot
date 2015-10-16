@@ -44,7 +44,7 @@ exp = "EXPOSURE"     # Exposure time keyword, seconds
 # phase out the old way slowly
 final_file_name = param_lines[0]
 image_dir = param_lines[3]
-header_items = np.asarray(param_lines[15].split(" "))
+header_items = np.asarray(param_lines[15].split())
 egain = float(param_lines[10])
 ccdread = float(param_lines[11])
 
@@ -57,44 +57,44 @@ ccdread = float(param_lines[11])
 def main():
 
     # Make lists of each for Everything
-    lc_out_list = np.asarray(param_lines[1].split(" "))
+    lc_out_list = np.asarray(param_lines[1].split())
 
-    coords_list = np.asarray(param_lines[2].split(" "))
+    coords_list = np.asarray(param_lines[2].split())
 
-    rootstr_list = np.asarray(param_lines[4].split(" "))
+    rootstr_list = np.asarray(param_lines[4].split())
 
     isOneRootStr = False
     if(rootstr_list.size == 1):
         isOneRootStr = True
 
     # check to see if endstr is static
-    endstr_list = np.asarray(param_lines[5].split(" "))
+    endstr_list = np.asarray(param_lines[5].split())
     if(endstr_list.size == 1):
         ep.endstr = endstr_list[0]  # if only one ending str
     else:
         checkSameSize(rootstr_list, endstr_list, "root string", "end string") # check list size
 
-    fwhmpsf_list = np.asarray(map(float, param_lines[6].split(" ")))
+    fwhmpsf_list = np.asarray(map(float, param_lines[6].split()))
 
-    annulus_list = np.asarray(map(float, param_lines[12].split(" ")))
+    annulus_list = np.asarray(map(float, param_lines[12].split()))
 
-    dannulus_list = np.asarray(map(float, param_lines[13].split(" ")))
+    dannulus_list = np.asarray(map(float, param_lines[13].split()))
 
-    skyvalue_list = np.asarray(map(float, param_lines[14].split(" ")))
+    skyvalue_list = np.asarray(map(float, param_lines[14].split()))
 
-    sigma_list = np.asarray(map(float, param_lines[7].split(" ")))
+    sigma_list = np.asarray(map(float, param_lines[7].split()))
     if(sigma_list.size == 1):
         ep.sigma = 1.0 * sigma_list[0]
     else:
         checkSameSize(rootstr_list, sigma_list, "root string", "sigma_list") # check list size
 
-    hiclip_list = np.asarray(map(float, param_lines[8].split(" ")))
+    hiclip_list = np.asarray(map(float, param_lines[8].split()))
     if(hiclip_list.size == 1):
         ep.hiclip = 1.0 * hiclip_list[0]
     else:
         checkSameSize(rootstr_list, hiclip_list, "root string", "hiclip") # check list size
 
-    lowclip_list = np.asarray(map(float, param_lines[9].split(" ")))
+    lowclip_list = np.asarray(map(float, param_lines[9].split()))
     if(lowclip_list.size == 1):
         ep.lowclip = 1.0 * lowclip_list[0]
     else:

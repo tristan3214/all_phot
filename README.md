@@ -11,7 +11,7 @@ There will also be example scenarios of parameter file given in the folder examp
 
 # How To Use
 The parameter file consists of 16 lines that define all there is needed to run all_phot properly.
-Following will be a line by line description of each parameter, and keep in mind that multiple arguments per line MUST be delimeted by a SINGLE space. Read the debug section for solutions to common problems.
+Following will be a line by line description of each parameter, and keep in mind that multiple arguments per line MUST be delimeted by white space. Read the debug section for solutions to common problems.
 
 line1: This is were you give the name of master output file, e.g. final_phot.dat
 
@@ -58,5 +58,3 @@ Coming soon!
 2. Merge easy_phot into all_phot.
 
 3. Try to make into an executable application similar to a .exe file on windows.
-
-4. Look into fixing the sensitivity of the parameter file and its spacing.
