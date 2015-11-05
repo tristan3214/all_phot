@@ -1,13 +1,14 @@
 # all_phot
 This is a wrapper script to a program written by someone, who's name eludes me, at the University of Washington that performs aperture photometry on a set of images.
 
-Keep in mind there is a different version for the UW computers labs found in the folder labAll_phot.  For those using Ureka just use the version found in regAll_phot.  I personally have a broken profile when it comes to python and IRAF at the UW astro lab computers.  So once I get that fixed I can more readily know the differences between the two.  Also don't run this program while pyraf or iraf is active in your UW lab terminal.
 
 I have overhauled all_phot so that one no longer needs to have a plethora of text files defining
 the different attributes of each needed parameter.
 
 This will detail on how on single "parameter" file is used to specify all the needed parameters.
 There will also be example scenarios of parameter file given in the folder examples.
+
+If you want to use this code on a UW astrolab computer you will need to start a Ureka terminal.
 
 # How To Use
 The parameter file consists of 16 lines that define all there is needed to run all_phot properly.
