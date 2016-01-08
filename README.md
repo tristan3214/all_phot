@@ -51,7 +51,18 @@ Once your parameter file is setup you run all_phot using the following command:
         python all_phot.py parameterFile.txt
 
 #Common Problems
-Coming soon!
+There are no major bugs to be seen, and the way the program is setup is so that they only have to edit one file.  This redirects any worry for the user from having to edit the .py files directly like in the past with easy_phot.py; that is a volatile task and can lead to user error.  As long as the user follows the directions and runs through the example for extra help they should be successful in correctly running the program.
+
+# Automatic Error Checking Features
+The program has some built in features to check for some common errors that I noticed users were getting during normal usage of easy_phot.py:
+    1. There is a rudimentary system to check that the user has entered the correct amount of arguments in the parameter file based on the number of root strings present.  For example, if one gives two root strings then the program will check that there are two coordinate files names listed and so on.  If it doesn't successful pass this error checking the program will state which "list" is not matching up with the root string "list".
+
+    2. When using imexam to make a raw coordinate list sometimes it will produce INDEFs in non-essential quantities that break easy_phot.py.  This program attempts to find any INDEFs in these coordinate files and will notify the user which ones have them and exit the program abnormally.
+
+# Limitations
+1. There is only one glaring limitation to the program.  That is the fact that this program is intended to look at images of the same field that may be across different days measuring the same number of stars.  This means that one can not take two completely different fields wanting to measure a different number of stars in each.  However, I suppose, one could still use this program on completely different fields as long as they measure the same amount of stars in each.
+
+2. A subtle detail is that that during the root string list size checking it does not make sure there is either only one or as many values in the arguements that can have either one specification or many.  Those are paramter arguements like low clip and high clip.
 
 #Future Work
 1. Get the name of the person that originally wrote easy_phot and give them the proper credit since that is the back bone in the all_phot scrip.
