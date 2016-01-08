@@ -10,6 +10,8 @@ There will also be example scenarios of parameter file given in the folder examp
 
 If you want to use this code on a UW astrolab computer you will need to start a Ureka terminal.
 
+I encourage the user to glance over the **Common Problem** and **Limitations** sections.
+
 # How To Use
 The parameter file consists of 16 lines that define all there is needed to run all_phot properly.
 Following will be a line by line description of each parameter, and keep in mind that multiple arguments per line MUST be delimeted by white space. Read the debug section for solutions to common problems.
@@ -50,6 +52,13 @@ Once your parameter file is setup you run all_phot using the following command:
 
         python all_phot.py parameterFile.txt
 
+# Example
+The example file holds the all_phot program and files so that the user can get a feel for the use of allphot or for debugging purposes.  Know that this example has been successfully run on the UW lab computers using Ureka.
+
+The most important files to look at are the param_file_description.txt, parmaterFile.txt, and parameterFile2.txt.  There is only a small difference between parameterFile.txt and parameterFile2.txt.  In parameterFile.txt I specify a value for everything reflecting the number of root strings; that is parameters like high clip and low clip are given an argument for each batch of images whereas I could have only given one.  Conversely, in parameterFile2.txt I specify only one value for arguments like high clip and low clip to illustrate the usage in both.  This feature is outlined in the above directions well as the param_file_description.txt.
+
+Download the example directory and start testing.  The only argument in the parameter file to change to get it running right away is the directory path to the images. 
+
 #Common Problems
 There are no major bugs to be seen, and the way the program is setup is so that the user only has to edit one file.  This redirects any worry for the user from having to edit the .py files directly like in the past with easy_phot.py; that is a volatile task and can lead to user error.  As long as the user follows the directions and runs through the example for extra help they should be successful in correctly running the program.
 
@@ -64,6 +73,8 @@ The program has some built in features to check for some common errors that I no
 1. There is only one glaring limitation to the program.  That is the fact that this program is intended to look at images of the same field that may be across different days measuring the same number of stars.  This means that one can not take two completely different fields wanting to measure a different number of stars in each.  However, I suppose, one could still use this program on completely different fields as long as they measure the same amount of stars in each.
 
 2. A subtle detail is that that during the root string list size checking it does not make sure there is either only one or as many values in the arguements that can have either one specification or many.  Those are paramter arguements like low clip and high clip.
+
+3. When I run the program myself using the given command on my own installation of Ureka I am able to run it in a instance of pyraf with a bang, !, symbol at the beginning.  However, this is not the case for the UW astronomy computer labs.  Make sure on the UW astro. lab computers you are not in an instance of pyraf only that you are in a Ureka terminal.
 
 #Future Work
 1. Get the name of the person that originally wrote easy_phot and give them the proper credit since that is the back bone in the all_phot scrip.
