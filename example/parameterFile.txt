@@ -1,0 +1,16 @@
+final_phot.dat
+group1.dat group2.dat
+EBCoords.txt rebCoords.txt
+/home/tristan/all_phot/all_phot/example/
+EB787   reb787
+fits    fits
+2.70  2.70
+20.0 20.0
+30.0 30.0
+10.0 10.0
+2.98
+56.96
+4.70 4.70
+7.70 7.70
+100 100
+HJD AIRMASS

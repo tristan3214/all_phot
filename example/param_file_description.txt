@@ -1,0 +1,16 @@
+# give a name for the final photometry file
+# give a name for each subfile that will act as storage for the individual days photometry; each name delimited by a space
+# give the name of your raw coords files from a pass of imexam; each file name delimited by a space
+# give the image directory
+# give the root string name for each batch
+# give the end string name for either all files or one for every group.
+# give the fwhmpsf values; one for each batch
+# give sigma value, one for all, or one for each batch
+# give hiclip value, one for all, or one for each batch
+# give lowclip value, one for all, or one for each batch
+# gain of CCD
+# read noise of CCD
+# give annulus for each batch
+# give dannulus for each batch
+# give sky value for each batch
+# specify the keywords you want from the header
