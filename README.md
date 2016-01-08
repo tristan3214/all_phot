@@ -55,6 +55,7 @@ There are no major bugs to be seen, and the way the program is setup is so that 
 
 # Automatic Error Checking Features
 The program has some built in features to check for some common errors that I noticed users were getting during normal usage of easy_phot.py:
+
 1. There is a rudimentary system to check that the user has entered the correct amount of arguments in the parameter file based on the number of root strings present.  For example, if one gives two root strings then the program will check that there are two coordinate files names listed and so on.  If it doesn't successful pass this error checking the program will state which "list" is not matching up with the root string "list".
 
 2. When using imexam to make a raw coordinate list sometimes it will produce INDEFs in non-essential quantities that break easy_phot.py.  This program attempts to find any INDEFs in these coordinate files and will notify the user which ones have them and exit the program abnormally.
